@@ -28,7 +28,7 @@
 
 ### Installation
 
-1. Get a API token at <<domain>>>.cloudwiz.io
+1. Get a API token at '''<<domain>>>.cloudwiz.io'''
 2. Clone the repo
    ```sh
    git clone https://github.com/cloudwizio/terraform
