@@ -28,18 +28,18 @@
 
 ### Installation
 
-1. Get a API token at <<domain>>.cloudwiz.io
+1. Get a API token at <<domain>>>.cloudwiz.io
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/cloudwizio/terraform
    ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. For onboarding AWS usage account, go to examples/aws-usage-account
+1. For onboarding AWS usage account, please see examples/aws-usage-account
 
-2. Make sure AWS credentials are set up. Alternatively, you can use AWS SSO to set up proper AWS profiles and use the right profile
+2. Make sure AWS credentials are set up for AWS CLI on your workstation. Alternatively, you can use AWS SSO to set up proper AWS profiles and use the profile for your AWS usage account.
 
 3. Initialize Terraform 
     ```sh 

@@ -1,5 +1,5 @@
 
-resource "aws_cloudformation_stack" "mcx-usage-account-onboarding" {
+resource "aws_cloudformation_stack" "mcx-usage-account-onboarding-stack" {
     name = "mcx-usage-account-onboarding-stack"
      parameters = {
         tenant = var.mcx_tenant_id,
