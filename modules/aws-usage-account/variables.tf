@@ -8,10 +8,6 @@ variable "mcx_bearer_token" {
 }
 variable "domain" {
   description = "Tenant domain"
-  validation {
-    condition     = "^[A-Za-z0-9-]+$"
-    error_message = "The domain must not contain special characters other than hyphen"
-  }
 }
 
 variable "regions" {
