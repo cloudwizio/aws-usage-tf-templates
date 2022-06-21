@@ -51,7 +51,7 @@
     ```
 4. Apply
     ```sh 
-    terraform apply
+    terraform apply -var='mcx_tenant_id=' -var='mcx_bearer_token=' -var='domain='
     ```
 <!-- LICENSE -->
 ## License
