@@ -37,21 +37,16 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. For onboarding AWS usage account, please see examples/aws-usage-account
+1. For onboarding AWS usage account, please store your profiles(AWS credentials) in ~/.aws/credentials  
 
-2. Make sure AWS credentials are set up for AWS CLI on your workstation. Alternatively, you can use AWS SSO to set up proper AWS profiles and use the profile for your AWS usage account.
+2. Make the script executable:
+    ```sh 
+    chmod +x run-terraform.sh
+    ```
 
-3. Initialize Terraform 
+3. Run the script
     ```sh 
-    terraform init
-    ```
-3.  Plan 
-    ```sh 
-    terraform plan
-    ```
-4. Apply
-    ```sh 
-    terraform apply -var='mcx_tenant_id=' -var='mcx_bearer_token=' -var='domain='
+    ./run-terraform.sh <MCX_TENANT_ID> <MCX_BEARER_TOKEN> <AWS_PROFILE> [profile2] [profile3] ...
     ```
 <!-- LICENSE -->
 ## License

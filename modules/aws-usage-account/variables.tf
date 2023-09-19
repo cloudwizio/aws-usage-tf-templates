@@ -6,8 +6,9 @@ variable "mcx_tenant_id" {
 variable "mcx_bearer_token" {
   description = "MCX bearer token"
 }
-variable "domain" {
-  description = "Tenant domain"
+
+variable "aws_profile" {
+  description = "AWS profile"
 }
 
 variable "regions" {
