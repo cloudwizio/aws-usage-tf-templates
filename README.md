@@ -28,7 +28,7 @@
 
 ### Installation
 
-1. Get a API token at ```<<domain>>>.cloudwiz.io```
+1. Get a API token/Bearer Token from your tenant(eg: demo.digitalex.io). Navigate to Side Bar > Admin > API
 2. Clone the repo
    ```sh
    git clone https://github.com/cloudwizio/terraform
@@ -46,7 +46,7 @@
 
 3. Run the script
     ```sh 
-    ./run-terraform.sh <MCX_TENANT_ID> <MCX_BEARER_TOKEN> <AWS_PROFILE> [profile2] [profile3] ...
+    ./run-terraform.sh <TENANT_ID> <BEARER_TOKEN> <AWS_PROFILE> [profile2] [profile3] ...
     ```
 <!-- LICENSE -->
 ## License
