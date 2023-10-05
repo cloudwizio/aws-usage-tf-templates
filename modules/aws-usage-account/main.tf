@@ -4,12 +4,12 @@ provider "aws" {
 }
 
 
-resource "aws_cloudformation_stack" "mcx-usage-account-onboarding-stack" {
-    name = "mcx-usage-account-onboarding-stack"
+resource "aws_cloudformation_stack" "dx-usage-account-onboarding-stack" {
+    name = "dx-usage-account-onboarding-stack"
      parameters = {
-        tenant = var.mcx_tenant_id,
-        token = var.mcx_bearer_token,
-        regions =  var.regions,
+        tenant    = var.tenant_id,
+        token     = var.bearer_token,
+        regions   = var.regions,
         operation = "create"
       }
       capabilities = ["CAPABILITY_IAM"]

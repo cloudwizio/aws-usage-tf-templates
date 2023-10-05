@@ -46,7 +46,7 @@
 
 3. Run the script
     ```sh 
-    ./run-terraform.sh <MCX_TENANT_ID> <MCX_BEARER_TOKEN> <AWS_PROFILE> [profile2] [profile3] ...
+    ./run-terraform.sh <TENANT_ID> <BEARER_TOKEN> <AWS_PROFILE> [profile2] [profile3] ...
     ```
 <!-- LICENSE -->
 ## License
@@ -56,4 +56,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - info@cloudwiz.io
+Your Name - support@digitalex.io

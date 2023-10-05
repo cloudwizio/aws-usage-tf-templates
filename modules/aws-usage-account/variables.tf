@@ -1,10 +1,10 @@
 
-variable "mcx_tenant_id" {
-  description = "MCX tenant id"
+variable "tenant_id" {
+  description = "DigitalEx tenant id"
 }
 
-variable "mcx_bearer_token" {
-  description = "MCX bearer token"
+variable "bearer_token" {
+  description = "DigitalEx bearer token"
 }
 
 variable "aws_profile" {
