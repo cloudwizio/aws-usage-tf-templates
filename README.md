@@ -28,7 +28,7 @@
 
 ### Installation
 
-1. Get a API token/Bearer Token from your tenant(eg: demo.digitalex.io). Navigate to Side Bar > Admin > API
+1. Get a JWT Token from your tenant(eg: demo.digitalex.io). Navigate to Side Bar > Admin > API
 2. Clone the repo
    ```sh
    git clone https://github.com/cloudwizio/terraform
