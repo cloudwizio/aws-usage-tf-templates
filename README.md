@@ -40,37 +40,36 @@
 # Run as a module:
 This step assumes that you already have some existing Terraform configurations that are applied to all your accounts when run. In this case, you can simply copy the module and call it from your existing configurations.
 
-1. Add the Module to Your Configuration:
-
+### 1. Add the Module to Your Configuration
   In your existing Terraform configuration file (e.g., main.tf), add a module block to use our module:
-
   ```sh
-  module "aws-usage-account" {
-    source           = "modules/v2"        # replace with module path based on your folder structure
-    tenant_id        = "h6rbwskbwf_6x5h6"  # replace with your DigitalEx tenant id
-    bearer_token     = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJjZGFiZDIwNzVjODQxNDI0NDY3MTNlM2U0NGU5ZDcxOGU3YzJkYjQiLCJ0eXAiOiJKV1QifQ..." # replace with DigitalEx JWT token
-    aws_profile      = "default" # replace with aws profile name present in ~/.aws/credentials
-  }
+    module "aws-usage-account" {
+      source           = "modules/v2"         # replace with module path based on your folder structure
+      tenant_id        = "h6rbwskbwf_6x5h6"   # replace with your DigitalEx tenant id
+      bearer_token     = "****"               # replace with DigitalEx JWT token
+      aws_profile      = "default"            # replace with aws profile name present in ~/.aws/credentials
+    }
+  ```
 
-2. Run terraform init:
+### 2. Run terraform init
 Initialize your Terraform workspace to download any necessary provider plugins and set up the module.
 
 ```sh
-  terraform init
+  $ terraform init
 ```
 
-3. Run terraform plan:
+### 3. Run terraform plan
 To see the changes Terraform will apply, generate and review a plan:
 
 ```sh
-  terraform plan
+  $ terraform plan
 ```
 
-4. Apply Terraform Changes:
+### 4. Apply Terraform Changes
 Apply the changes to incorporate our module into your infrastructure:
 
 ```sh
-  terraform apply
+  $ terraform apply
 ```
 
 # Onboard multiple AWS usage accounts using shell script:
