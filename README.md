@@ -44,7 +44,7 @@
 In your existing Terraform configuration file (e.g., main.tf), add a module block to use our module:
 
 ```sh
-  module "aws-usage-account" {
+module "aws-usage-account" {
   source           = "../../modules/v2"
   tenant_id        = "h6rbwskbwf_6x5h6"  # replace with your DigitalEx tenant id
   bearer_token     = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJjZGFiZDIwNzVjODQxNDI0NDY3MTNlM2U0NGU5ZDcxOGU3YzJkYjQiLCJ0eXAiOiJKV1QifQ..." # replace with DigitalEx JWT token
