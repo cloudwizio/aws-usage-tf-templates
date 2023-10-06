@@ -9,7 +9,6 @@ resource "aws_cloudformation_stack" "dx-usage-account-onboarding-stack" {
      parameters = {
         tenant    = var.tenant_id,
         token     = var.bearer_token,
-        regions   = var.regions,
         operation = "create"
       }
       capabilities = ["CAPABILITY_IAM"]
