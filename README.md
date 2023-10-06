@@ -46,9 +46,9 @@ In your existing Terraform configuration file (e.g., main.tf), add a module bloc
 
 ```sh
 module "aws-usage-account" {
-  source           = "modules/v2"        # replace with module path based on your folder structure
+  source           = "dx-aws-usage-templates/v2"        # replace with module path based on your folder structure
   tenant_id        = "h6rbwskbwf_6x5h6"  # replace with your DigitalEx tenant id
-  bearer_token     = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJjZGFiZDIwNzVjODQxNDI0NDY3MTNlM2U0NGU5ZDcxOGU3YzJkYjQiLCJ0eXAiOiJKV1QifQ..." # replace with DigitalEx JWT token
+  bearer_token     = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." # replace with DigitalEx JWT token
   aws_profile      = "default" # replace with aws profile name present in ~/.aws/credentials
 }
 ```
