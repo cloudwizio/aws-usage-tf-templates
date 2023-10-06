@@ -37,7 +37,8 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-# Run aws-usage-tf-templates as a module:
+# Run as a module (from your existing terraform configurations)
+This step assumes that you already have some existing Terraform configurations that are applied to all your accounts when run. In this case, you can simply copy the module and call it from your existing configurations.
 
 1. Add the Module to Your Configuration:
 
