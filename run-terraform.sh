@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [ $# -lt 2 ]; then
-  echo "Usage: $0 <MCX_TENANT_ID> <MCX_BEARER_TOKEN> <profile1> [profile2] [profile3] ..."
+  echo "Usage: $0 <TENANT_ID> <BEARER_TOKEN> <profile1> [profile2] [profile3] ..."
   exit 1
 fi
 
-MCX_TENANT_ID="$1"
-MCX_BEARER_TOKEN="$2"
+TENANT_ID="$1"
+BEARER_TOKEN="$2"
 shift 2
 
 AWS_PROFILES=("$@")
@@ -24,14 +24,14 @@ for profile in "${AWS_PROFILES[@]}"; do
 
   terraform init
 
-  terraform plan -var "aws_profile=$AWS_PROFILE" -var "mcx_tenant_id=$MCX_TENANT_ID" -var "mcx_bearer_token=$MCX_BEARER_TOKEN"
+  terraform plan -var "aws_profile=$AWS_PROFILE" -var "tenant_id=$TENANT_ID" -var "bearer_token=$BEARER_TOKEN"
 
   exit_code=$?
 
   if [ $exit_code -eq 0 ]; then
     echo "Terraform plan for profile $profile completed successfully."
 
-    terraform apply -var "aws_profile=$AWS_PROFILE" -var "mcx_tenant_id=$MCX_TENANT_ID" -var "mcx_bearer_token=$MCX_BEARER_TOKEN"
+    terraform apply -var "aws_profile=$AWS_PROFILE" -var "tenant_id=$TENANT_ID" -var "bearer_token=$BEARER_TOKEN"
 
     apply_exit_code=$?
 

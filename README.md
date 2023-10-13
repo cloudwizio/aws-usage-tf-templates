@@ -28,23 +28,62 @@
 
 ### Installation
 
-1. Get a API token/Bearer Token from your tenant(eg: demo.digitalex.io). Navigate to Side Bar > Admin > API
+1. Get a JWT Token from your tenant(eg: demo.digitalex.io). Navigate to Side Bar > Admin > API
 2. Clone the repo
    ```sh
-   git clone https://github.com/cloudwizio/terraform
+   git clone https://github.com/cloudwizio/aws-usage-tf-templates.git
    ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. For onboarding AWS usage account, please store your profiles(AWS credentials) in ~/.aws/credentials  
+# Run as a module:
+This step assumes that you already have some existing Terraform configurations that are applied to all your accounts when run. In this case, you can simply copy the module and call it from your existing configurations.
 
-2. Make the script executable:
+### 1. Add the Module to Your Configuration
+  In your existing Terraform configuration file (e.g., main.tf), add a module block to use our module:
+
+```sh
+    module "aws-usage-account" {
+      source           = "dx-aws-usage-templates/v2" # replace with module path based on your folder structure
+      tenant_id        = "h6rbwskbwf_6x5h6"          # replace with your DigitalEx tenant id
+      bearer_token     = "***..."                    # replace with DigitalEx JWT token
+      aws_profile      = "default"                   # replace with aws profile name present in ~/.aws/credentials
+}
+```
+
+2. Run terraform init:
+Initialize your Terraform workspace to download any necessary provider plugins and set up the module.
+
+```sh
+  $ terraform init
+```
+
+### 3. Run terraform plan
+To see the changes Terraform will apply, generate and review a plan:
+
+```sh
+  $ terraform plan
+```
+
+### 4. Apply Terraform Changes
+Apply the changes to incorporate our module into your infrastructure:
+
+```sh
+  $ terraform apply
+```
+
+# Onboard multiple AWS usage accounts using shell script:
+
+For onboarding AWS usage account, please store all your profiles(AWS credentials) in ~/.aws/credentials  
+Shell will read all the profile from credentials and onboard each account one-by-one.
+
+1. Make the script executable:
     ```sh 
     chmod +x run-terraform.sh
     ```
 
-3. Run the script
+2. Run the script
     ```sh 
     ./run-terraform.sh <TENANT_ID> <BEARER_TOKEN> <AWS_PROFILE> [profile2] [profile3] ...
     ```
@@ -56,4 +95,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - info@cloudwiz.io
+Your Name - support@digitalex.io
